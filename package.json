@@ -1,0 +1,28 @@
+{
+  "name": "wpcom-vip",
+  "description": "Official JavaScript library for the WordPress.com VIP REST API",
+  "version": "0.0.1",
+  "author": "Automattic, Inc.",
+  "contributors": [
+    "Nick Daugherty <ndaugherty987@gmail.com>"
+  ],
+  "keywords": [
+    "wordpress",
+    "wordpress.com",
+    "wordpress.com vip",
+    "vip",
+    "browser",
+    "rest",
+    "api",
+    "library"
+  ],
+  "repository": "git@github.com:Automattic/vip-js-sdk.git",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "2.1.3"
+  },
+  "devDependencies": {
+    "browserify": "10.0.0",
+    "mocha": "2.2.4"
+  }
+}
