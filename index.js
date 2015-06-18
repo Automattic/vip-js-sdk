@@ -5,11 +5,11 @@ var request     = require( './lib/util/request' );
 
 
 function WPCOM_VIP( token ) {
-    this.API_VERSION = '1';
-    this.API_TIMEOUT = 10000;
-
     this.req = new Request( this );
 }
+
+WPCOM_VIP.prototype.API_VERSION = '1';
+WPCOM_VIP.prototype.API_TIMEOUT = 10000;
 
 WPCOM_VIP.prototype.req = new Request();
 
