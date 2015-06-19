@@ -6,6 +6,8 @@ var request     = require( './lib/util/request' );
 
 function WPCOM_VIP( token ) {
     this.req = new Request( this );
+
+    this.auth = {};
 }
 
 WPCOM_VIP.prototype.API_VERSION = '1';
