@@ -1,5 +1,5 @@
 var debug       = require( 'debug' )( 'wpcom-vip' );
-var request     = require( './lib/util/request' );
+var Request     = require( './lib/util/request' );
 
 // Modules
 
