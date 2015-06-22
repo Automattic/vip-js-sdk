@@ -13,8 +13,6 @@ function WPCOM_VIP( token ) {
 WPCOM_VIP.prototype.API_VERSION = '1';
 WPCOM_VIP.prototype.API_TIMEOUT = 10000;
 
-WPCOM_VIP.prototype.req = new Request();
-
 WPCOM_VIP.prototype.get = function() {
     return this.req.get.apply( arguments );
 };
