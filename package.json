@@ -22,7 +22,7 @@
     "test": "export NODE_ENV=test; jshint index.js lib"
   },
   "bin": {
-    "vip": "bin/vip.js"  
+    "vip": "bin/vip.js"
   },
   "dependencies": {
     "debug": "2.1.3",
