@@ -14,3 +14,7 @@ program
     .version( '0.0.1' )
     .command( 'import' )
     .parse( process.argv );
+
+if ( ! process.argv.slice( 2 ).length ) {
+    program.outputHelp();
+}
