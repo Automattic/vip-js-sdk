@@ -12,7 +12,7 @@ var program = require( 'commander' );
 
 program
     .version( '0.0.1' )
-    .command( 'import' )
+    .command( 'import', 'import content to your site' )
     .parse( process.argv );
 
 if ( ! process.argv.slice( 2 ).length ) {
