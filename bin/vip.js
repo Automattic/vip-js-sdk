@@ -12,6 +12,7 @@ var program = require( 'commander' );
 
 program
     .version( '0.0.1' )
+    .command( 'auth', 'setup authorization to VIP' )
     .command( 'import', 'import content to your site' )
     .parse( process.argv );
 
