@@ -30,4 +30,8 @@ WPCOM_VIP.prototype.delete = function() {
     return this.req.delete.apply( this.req, arguments );
 };
 
+WPCOM_VIP.prototype.makeUrl = function( url ) {
+    return this.req.makeUrl( url );
+};
+
 module.exports = WPCOM_VIP;
