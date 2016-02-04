@@ -26,8 +26,8 @@ WPCOM_VIP.prototype.put = function() {
     return this.req.get.apply( this.req, arguments );
 };
 
-WPCOM_VIP.prototype.delete = function() {
-    return this.req.delete.apply( this.req, arguments );
+WPCOM_VIP.prototype.del = function() {
+    return this.req.del.apply( this.req, arguments );
 };
 
 WPCOM_VIP.prototype.makeUrl = function( url ) {
