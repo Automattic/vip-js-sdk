@@ -23,7 +23,7 @@ WPCOM_VIP.prototype.post = function() {
 };
 
 WPCOM_VIP.prototype.put = function() {
-    return this.req.get.apply( this.req, arguments );
+    return this.req.put.apply( this.req, arguments );
 };
 
 WPCOM_VIP.prototype.del = function() {
