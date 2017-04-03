@@ -8,6 +8,9 @@ function WPCOM_VIP( token ) {
     this.req = new Request( this );
 
     this.auth = {};
+
+    const sites = require( './lib/sites' );
+    this.sites = new sites( this );
 }
 
 WPCOM_VIP.prototype.API_URL     = 'https://api.vipv2.net';
