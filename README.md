@@ -21,4 +21,4 @@ make test
 
 ## License
 
-MIT – Copyright 2015 Automattic
+MIT – Copyright 2017 Automattic
