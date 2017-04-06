@@ -2,9 +2,9 @@ const vip = require( '../..' );
 const api = new vip();
 
 // Get all launched sites
-api.sites.all( { launched: true } )
-	.then( s => console.log( "Total launched sites:", s.length ) )
-	.catch( e => console.log( e ) );
+api.sites.all( { launched: true }, ( err, sites ) => {
+	console.log( err, sites.length );
+});
 
 // Get first launched site
 api.sites
