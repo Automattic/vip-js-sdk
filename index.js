@@ -11,6 +11,18 @@ function WPCOM_VIP( token ) {
 
     const sites = require( './lib/sites' );
     this.sites = new sites( this );
+
+    const containers = require( './lib/containers' );
+    this.containers = new containers( this );
+
+    const files = require( './lib/files' );
+    this.files = new files( this );
+
+    const hostAction = require( './lib/host-action' );
+    this.hostAction = new hostAction( this );
+
+    const sandbox = require( './lib/sandbox' );
+    this.sandbox = new sandbox( this );
 }
 
 WPCOM_VIP.prototype.API_URL     = 'https://api.vipv2.net';
