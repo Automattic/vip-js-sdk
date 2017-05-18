@@ -45,13 +45,13 @@ const CAP_API_ADD = 4;
 const CAP_API_DELETE = 8;
 
 WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
-    this.caps.forEach( function( c ) {
+    return this.caps.some( function( c ) {
         if ( c.resource_name == cap ) {
             return action <= c.permissions;
         }
-    });
 
-    return false;
+        return false;
+    });
 };
 
 WPCOM_VIP.prototype.currentUserCanRead = function( cap ) {
