@@ -39,6 +39,11 @@ WPCOM_VIP.prototype.makeUrl = function( url ) {
 };
 
 // Caps
+const CAP_API_READ = 1;
+const CAP_API_EDIT = 2;
+const CAP_API_ADD = 4;
+const CAP_API_DELETE = 8;
+
 WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
     this.caps.forEach( function( c ) {
         if ( c.resource_name == cap ) {
@@ -50,19 +55,19 @@ WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
 };
 
 WPCOM_VIP.prototype.currentUserCanRead = function( cap ) {
-    return this.currentUserCan( cap, 1 );
+    return this.currentUserCan( cap, CAP_API_READ );
 };
 
 WPCOM_VIP.prototype.currentUserCanEdit = function( cap ) {
-    return this.currentUserCan( cap, 2 );
+    return this.currentUserCan( cap, CAP_API_EDIT );
 };
 
 WPCOM_VIP.prototype.currentUserCanAdd = function( cap ) {
-    return this.currentUserCan( cap, 4 );
+    return this.currentUserCan( cap, CAP_API_ADD );
 };
 
 WPCOM_VIP.prototype.currentUserCanDelete = function( cap ) {
-    return this.currentUserCan( cap, 8 );
+    return this.currentUserCan( cap, CAP_API_DELETE );
 };
 
 module.exports = WPCOM_VIP;
