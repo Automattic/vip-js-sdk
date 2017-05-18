@@ -8,6 +8,7 @@ function WPCOM_VIP( token ) {
     this.req = new Request( this );
 
     this.auth = {};
+    this.caps = [];
 
     const sites = require( './lib/sites' );
     this.sites = new sites( this );
@@ -35,6 +36,33 @@ WPCOM_VIP.prototype.del = function() {
 
 WPCOM_VIP.prototype.makeUrl = function( url ) {
     return this.req.makeUrl( url );
+};
+
+// Caps
+WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
+    this.caps.forEach( function( c ) {
+        if ( c.resource_name == cap ) {
+            return action >= c.permissions;
+        }
+    });
+
+    return false;
+};
+
+WPCOM_VIP.prototype.currentUserCanRead = function( cap ) {
+    return this.currentUserCan( cap, 1 );
+};
+
+WPCOM_VIP.prototype.currentUserCanEdit = function( cap ) {
+    return this.currentUserCan( cap, 2 );
+};
+
+WPCOM_VIP.prototype.currentUserCanAdd = function( cap ) {
+    return this.currentUserCan( cap, 4 );
+};
+
+WPCOM_VIP.prototype.currentUserCanDelete = function( cap ) {
+    return this.currentUserCan( cap, 8 );
 };
 
 module.exports = WPCOM_VIP;
