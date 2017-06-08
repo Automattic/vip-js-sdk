@@ -45,6 +45,10 @@ const CAP_API_ADD = 4;
 const CAP_API_DELETE = 8;
 
 WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
+    if ( ! Array.isArray( this.caps ) ) {
+        return false;
+    }
+    
     return this.caps.some( function( c ) {
         if ( c.resource_name == cap ) {
             return action <= c.permissions;
