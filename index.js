@@ -10,7 +10,7 @@ function WPCOM_VIP( token ) {
     this.auth = {};
     this.caps = [];
 
-    const sites = require( './lib/sites' );
+    var sites = require( './lib/sites' );
     this.sites = new sites( this );
 }
 
@@ -39,10 +39,10 @@ WPCOM_VIP.prototype.makeUrl = function( url ) {
 };
 
 // Caps
-const CAP_API_READ = 1;
-const CAP_API_EDIT = 2;
-const CAP_API_ADD = 4;
-const CAP_API_DELETE = 8;
+var CAP_API_READ = 1;
+var CAP_API_EDIT = 2;
+var CAP_API_ADD = 4;
+var CAP_API_DELETE = 8;
 
 WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
     if ( ! Array.isArray( this.caps ) ) {
