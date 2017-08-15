@@ -7,6 +7,7 @@ var Request     = require( './lib/util/request' );
 function WPCOM_VIP( token ) {
     this.req = new Request( this );
 
+    this.proxy = '';
     this.auth = {};
     this.caps = [];
 
