@@ -13,6 +13,9 @@ function WPCOM_VIP( token ) {
 
     var sites = require( './lib/sites' );
     this.sites = new sites( this );
+
+    var softwareStacks = require( './lib/software-stacks' );
+    this.softwareStacks = new softwareStacks( this );
 }
 
 WPCOM_VIP.prototype.API_URL     = 'https://api.vipv2.net';
@@ -49,7 +52,7 @@ WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
     if ( ! Array.isArray( this.caps ) ) {
         return false;
     }
-    
+
     return this.caps.some( function( c ) {
         if ( c.resource_name == cap ) {
             return action <= c.permissions;
