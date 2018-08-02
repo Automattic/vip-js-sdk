@@ -1,7 +1,7 @@
 var gulp        = require( 'gulp' );
 var browserify  = require( 'browserify' );
 var source      = require( 'vinyl-source-stream' );
-var uglify      = require( 'gulp-uglify' );
+var uglify      = require('gulp-uglify-es').default;;
 var streamify   = require( 'gulp-streamify' );
 
 gulp.task( 'browserify', function() {
