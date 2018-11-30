@@ -17,7 +17,7 @@ function WPCOM_VIP( token ) {
 	this.softwareStacks = new SoftwareStacks( this );
 }
 
-WPCOM_VIP.prototype.API_URL = 'https://api.vipv2.net';
+WPCOM_VIP.prototype.API_URL = process.env.API_URL || 'https://api.vipv2.net';
 WPCOM_VIP.prototype.API_VERSION = '1';
 WPCOM_VIP.prototype.API_TIMEOUT = 10000;
 
