@@ -25,7 +25,7 @@
   "dependencies": {
     "debug": "3.1.0",
     "superagent": "3.8.3",
-    "superagent-proxy": "2.1.0"
+    "superagent-proxy": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
