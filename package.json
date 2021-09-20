@@ -25,12 +25,12 @@
   "dependencies": {
     "debug": "3.1.0",
     "superagent": "3.8.3",
-    "superagent-proxy": "2.1.0"
+    "superagent-proxy": "3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/eslint-parser": "^7.15.7",
-    "babel-eslint": "^10.0.1",
+    "@babel/core": "7.15.5",
+    "@babel/eslint-parser": "7.15.7",
+    "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
     "eslint-config-wpvip": "github:automattic/eslint-config-wpvip#d0aa883",
     "eslint-plugin-flowtype": "5.9.1",
