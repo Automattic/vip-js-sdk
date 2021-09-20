@@ -28,15 +28,20 @@
     "superagent-proxy": "2.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
-    "eslint-config-wpvip": "github:automattic/eslint-config-wpvip#84ba8eb",
-    "eslint-plugin-flowtype": "^3.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-json": "^1.2.1",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-wpcalypso": "^4.0.2",
+    "eslint": "5.16.0",
+    "eslint-config-wpvip": "github:automattic/eslint-config-wpvip#d0aa883",
+    "eslint-plugin-flowtype": "5.9.1",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jest": "24.4.0",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-no-async-foreach": "0.1.1",
+    "eslint-plugin-react": "7.25.1",
+    "eslint-plugin-wpcalypso": "5.0.0",
     "mocha": "5.2.0"
-  }
+  },
+  "babel": {}
 }
