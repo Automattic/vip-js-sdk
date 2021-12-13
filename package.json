@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "debug": "3.1.0",
-    "superagent": "3.8.3",
+    "superagent": "6.1.0",
     "superagent-proxy": "3.0.0"
   },
   "devDependencies": {
