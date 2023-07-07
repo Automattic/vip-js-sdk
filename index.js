@@ -33,6 +33,10 @@ WPCOM_VIP.prototype.put = function() {
 	return this.req.put.apply( this.req, arguments );
 };
 
+WPCOM_VIP.prototype.patch = function() {
+	return this.req.patch.apply( this.req, arguments );
+};
+
 WPCOM_VIP.prototype.del = function() {
 	return this.req.del.apply( this.req, arguments );
 };
