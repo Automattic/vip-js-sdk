@@ -1,9 +1,8 @@
-const debug = require( 'debug' )( 'wpcom-vip' );
 const Request = require( './lib/util/request' );
 
 // Modules
 
-function WPCOM_VIP( token ) {
+function WPCOM_VIP() {
 	this.req = new Request( this );
 
 	this.proxy = '';
@@ -51,14 +50,14 @@ const CAP_API_EDIT = 2;
 const CAP_API_ADD = 4;
 const CAP_API_DELETE = 8;
 
-WPCOM_VIP.prototype.currentUserCan = function( cap, action ) {
+WPCOM_VIP.prototype.currentUserCan = function( requestedCap, action ) {
 	if ( ! Array.isArray( this.caps ) ) {
 		return false;
 	}
 
-	return this.caps.some( function( c ) {
-		if ( c.resource_name === cap ) {
-			return action <= c.permissions;
+	return this.caps.some( function( cap ) {
+		if ( cap.resource_name === requestedCap ) {
+			return action <= cap.permissions;
 		}
 
 		return false;
