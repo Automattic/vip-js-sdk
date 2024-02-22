@@ -1,46 +1,26 @@
 {
-  "name": "vip",
-  "description": "Official JavaScript library for the WordPress.com VIP REST API",
+  "name": "@automattic/vip-js-sdk",
+  "description": "JavaScript library for the WPVIP REST API",
   "version": "0.0.1",
   "author": "Automattic, Inc.",
-  "contributors": [
-    "Nick Daugherty <ndaugherty987@gmail.com>"
-  ],
-  "keywords": [
-    "wordpress",
-    "wordpress.com",
-    "wordpress.com vip",
-    "vip",
-    "browser",
-    "rest",
-    "api",
-    "library"
-  ],
   "repository": "git@github.com:Automattic/vip-js-sdk.git",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test npm run lint",
-    "lint": "eslint index.js lib"
+    "cmd:format": "prettier '**/*.(js|json|jsx|md|ts|tsx|yml|yaml)'",
+    "cmd:lint": "eslint --ext 'js,jsx,ts,tsx' --quiet",
+    "format": "npm run cmd:format -- --write",
+    "format:check": "npm run cmd:format -- --check",
+    "lint": "npm run cmd:lint .",
+    "lint:fix": "npm run cmd:lint . -- --fix",
+    "test": "npm run lint"
   },
   "dependencies": {
-    "debug": "3.2.7",
     "superagent": "3.8.3",
     "superagent-proxy": "3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.17.5",
-    "@babel/eslint-parser": "7.17.0",
-    "babel-eslint": "10.1.0",
-    "eslint": "7.32.0",
-    "eslint-config-wpvip": "github:automattic/eslint-config-wpvip#984b8a8",
-    "eslint-plugin-flowtype": "5.10.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jest": "24.7.0",
-    "eslint-plugin-json": "3.1.0",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-no-async-foreach": "0.1.1",
-    "eslint-plugin-react": "7.28.0",
-    "eslint-plugin-wpcalypso": "5.0.0"
-  },
-  "babel": {}
+    "@automattic/eslint-plugin-wpvip": "0.5.8",
+    "eslint": "8.44.0",
+    "prettier": "npm:wp-prettier@2.8.5"
+  }
 }
